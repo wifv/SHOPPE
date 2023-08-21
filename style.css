@@ -53,6 +53,10 @@ body {
   background: #707070;
 }
 
+button {
+  cursor: pointer;
+}
+
 header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,7 +109,8 @@ header .navbar .nav-links .half-2 {
   gap: 39px;
 }
 header .big-img {
-  width: 1248px;
+  width: 100%;
+  max-width: 1248px;
   height: 646px;
   background: url(./images/50bccfce0c30bd8b330d8493ef0eb3fc.jpg);
   border-radius: 16px;
@@ -169,12 +174,33 @@ header .big-img .info button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+.blocks-container .blocks .block {
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.blocks-container .blocks .block img::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 377px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.5);
 }
 .blocks-container .blocks .block h4 {
   font-size: 20px;
   font-weight: 400;
   line-height: 26px; /* 130% */
   text-transform: capitalize;
+  position: relative;
+  top: 20px;
 }
 .blocks-container .blocks .block h5 {
   color: var(--light-colors-accent-light, #A18A68);
@@ -182,4 +208,40 @@ header .big-img .info button {
   font-size: 20px;
   font-weight: 500;
   line-height: 26px; /* 130% */
+  position: relative;
+  top: 35px;
+}
+
+.block .img-next {
+  visibility: hidden;
+  width: 377px;
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-size: 16px;
+  font-weight: 700;
+  bottom: 52px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block:hover .img-next {
+  visibility: visible;
+  opacity: 1;
 }
