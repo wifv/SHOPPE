@@ -39,6 +39,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+body {
+    font-family: DM Sans;
+}
+
 /* // */
 
 .container {
@@ -55,6 +59,10 @@ body {
 
 button {
     cursor: pointer;
+}
+
+input {
+    outline: none;
 }
 
 header {
@@ -157,7 +165,6 @@ header {
     color: var(--light-colors-black-light, #000);
 
     /* 20px - Heading 3 */
-    font-family: DM Sans;
     font-style: normal;
     
     .blocks {
@@ -234,3 +241,79 @@ header {
     visibility: visible;
     opacity: 1;
 }
+
+.footer {
+    width: 100%;
+    max-width: 1248px;
+    margin: 64px auto 80px auto;
+
+    .layer-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 100%;
+            max-width: 600px;
+
+            display: flex;
+            gap: 41px;
+            text-transform: uppercase;
+
+            a {
+                color: var(--light-colors-dark-gray-light, #707070);
+                
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 27px;
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 396px;
+
+            .ff {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .label-for-email {
+                    position: relative;
+                }
+
+                input {
+                    width: 396px;
+                    padding: 5px;
+                    border-bottom: 1px solid black;
+                }
+
+                input:hover {
+
+                    .label-for-email {
+                        bottom: 10px;
+                        font-size: larger;
+                        transition: all 0.66s;
+                    }
+                }
+            }
+
+            img {
+                position: relative;
+                right: 20px;
+            }
+        }
+    }
+
+    .layer-2 {
+        color: var(--light-colors-black-light, #000);
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px; /* 168.75% */
+    }
+}
+

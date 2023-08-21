@@ -40,6 +40,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+body {
+  font-family: DM Sans;
+}
+
 /* // */
 .container {
   width: 100%;
@@ -55,6 +59,10 @@ body {
 
 button {
   cursor: pointer;
+}
+
+input {
+  outline: none;
 }
 
 header .navbar {
@@ -162,7 +170,6 @@ header .big-img .info button {
   gap: 86px;
   color: var(--light-colors-black-light, #000);
   /* 20px - Heading 3 */
-  font-family: DM Sans;
   font-style: normal;
 }
 .blocks-container .blocks {
@@ -244,4 +251,85 @@ header .big-img .info button {
 .block:hover .img-next {
   visibility: visible;
   opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1248px;
+  margin: 64px auto 80px auto;
+}
+.footer .layer-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .layer-1 .left {
+  width: 100%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 41px;
+  text-transform: uppercase;
+}
+.footer .layer-1 .left a {
+  color: var(--light-colors-dark-gray-light, #707070);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.footer .layer-1 .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 396px;
+}
+.footer .layer-1 .right .ff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer .layer-1 .right .ff .label-for-email {
+  position: relative;
+}
+.footer .layer-1 .right .ff input {
+  width: 396px;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+.footer .layer-1 .right .ff input:hover .label-for-email {
+  bottom: 10px;
+  font-size: larger;
+  -webkit-transition: all 0.66s;
+  transition: all 0.66s;
+}
+.footer .layer-1 .right img {
+  position: relative;
+  right: 20px;
+}
+.footer .layer-2 {
+  color: var(--light-colors-black-light, #000);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
 }
